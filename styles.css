@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: white;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Loading Screen */
+#loadingScreen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Auth Pages */
+.auth-page {
+    padding-top: 100px;
+}
+
+.auth-page input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+
+.auth-page button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #007aff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Top Icons */
+.top-left, .top-right {
+    position: absolute;
+    top: 10px;
+}
+
+.top-left { left: 20px; }
+.top-right { right: 20px; }
+
+.notification-icon, .account-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    background: #1e1e1e;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Pages */
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Event Cards */
+.event-card {
+    background: #1e1e1e;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Table */
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid white;
+}
+
+/* Map */
+.map-container {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Notifications */
+.notification-panel {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.notification-panel.active {
+    display: block;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    background: #1e1e1e;
+}

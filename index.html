@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Buddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+        <div class="loading-text">Campus Buddy</div>
+    </div>
+
+    <!-- Login Page -->
+    <div id="loginPage" class="auth-page hidden">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter your username">
+        <input type="password" id="password" placeholder="Enter your password">
+        <button onclick="login()">Login</button>
+        <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+    </div>
+
+    <!-- Sign Up Page -->
+    <div id="signUpPage" class="auth-page hidden">
+        <h2>Sign Up</h2>
+        <input type="text" id="newUsername" placeholder="Enter your username">
+        <input type="password" id="newPassword" placeholder="Enter your password">
+        <button onclick="signUp()">Sign Up</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+   <!-- Home Page / Main Content -->
+    <div id="mainContent" class="hidden">
+        <header>
+            <div class="top-left">
+                <div class="notification-icon" onclick="toggleNotifications()">🔔</div>
+            </div>
+            <h1>Campus Buddy</h1>
+            <div class="top-right">
+                <div class="account-icon" onclick="showPage('account')">👤</div>
+            </div>
+        </header>
+
+        <div class="notification-panel" id="notificationPanel">
+            <h3>Notifications</h3>
+            <p>🎉 New event added: Hackathon 2025</p>
+            <p>📢 Campus announcement: Exams postponed!</p>
+            <button onclick="closeNotifications()">Close</button>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('events')">Events</a></li>
+                <li><a href="#" onclick="showPage('navigation')">Navigation</a></li>
+                <li><a href="#" onclick="showPage('faculty')">Faculty</a></li>
+                <li><a href="#" onclick="showPage('documents')">Documents</a></li>
+                <li><a href="#" onclick="showPage('account')">Account</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="home" class="page active">
+                <h2>Welcome to Campus Buddy</h2>
+                <p>Explore events, navigate campus, and manage documents easily.</p>
+            </section>
+
+            <section id="events" class="page">
+                <h2>Upcoming Events</h2>
+                <div class="event-card">📅 Hackathon 2025 - March 30</div>
+                <div class="event-card">🎭 Cultural Fest - April 15</div>
+                <div class="event-card">📖 Seminar on AI - May 5</div>
+            </section>
+
+            <section id="navigation" class="page">
+                <h2>Campus Map</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=MIT%20ADT%20University&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                        frameborder="0">
+                    </iframe>
+                </div>
+            </section>
+
+            <section id="faculty" class="page">
+                <h2>Faculty Details</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Subject</th>
+                        <th>Cabin No</th>
+                        <th>Contact</th>
+                    </tr>
+<tr>
+                        <td>Prof. Akash Alagankar</td>
+                        <td>Design Thinking</td>
+                        <td>A-305</td>
+                        <td>987654xxxx</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. John Doe</td>
+                        <td>Computer Science</td>
+                        <td>A-102</td>
+                        <td>987654xxxx</td>
+                    </tr>
+                    <tr>
+                        <td>Prof. Jane Smith</td>
+                        <td>Mathematics</td>
+                        <td>B-204</td>
+                        <td>987654xxxx</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="account" class="page">
+                <h2>Account</h2>
+                <p>Welcome, <span id="userDisplayName">User</span></p>
+                <button onclick="logout()">Sign Out</button>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Campus Buddy - MIT ADT University</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
