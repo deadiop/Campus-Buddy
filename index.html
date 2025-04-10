@@ -30,7 +30,7 @@
         <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
     </div>
 
-   <!-- Home Page / Main Content -->
+    <!-- Main Content -->
     <div id="mainContent" class="hidden">
         <header>
             <div class="top-left">
@@ -61,31 +61,21 @@
         </nav>
 
         <main>
-            <section id="home" class="page active">
+            <section id="home" class="page">
                 <h2>Welcome to Campus Buddy</h2>
                 <p>Explore events, navigate campus, and manage documents easily.</p>
             </section>
 
-            <section id="events" class="page">
+            <section id="events" class="page hidden">
                 <h2>Upcoming Events</h2>
                 <div class="event-card">📅 Hackathon 2025 - March 30</div>
                 <div class="event-card">🎭 Cultural Fest - April 15</div>
                 <div class="event-card">📖 Seminar on AI - May 5</div>
             </section>
 
-            <section id="navigation" class="page">
-                <h2>Campus Map</h2>
-                <div class="map-container">
-                    <iframe 
-                        src="https://maps.google.com/maps?q=MIT%20ADT%20University&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-                        frameborder="0">
-                    </iframe>
-                </div>
-            </section>
-
-            <section id="faculty" class="page">
+            <section id="faculty" class="page hidden">
                 <h2>Faculty Details</h2>
-                <table>
+               <table>
                     <tr>
                         <th>Name</th>
                         <th>Subject</th>
@@ -93,9 +83,9 @@
                         <th>Contact</th>
                     </tr>
 <tr>
-                        <td>Prof. Akash Alagaonkar</td>
+                        <td>Prof. Akash Alagankar</td>
                         <td>Design Thinking</td>
-                        <td>S-116</td>
+                        <td>A-305</td>
                         <td>987654xxxx</td>
                     </tr>
                     <tr>
@@ -112,8 +102,23 @@
                     </tr>
                 </table>
             </section>
+<section id="documents" class="page hidden">
+  <h2>Documents</h2>
+  <p>Access your academic documents and services.</p>
+  <button onclick="openDocumentsPortal()" class="document-btn">Open TCS iON Portal</button>
+</section>
 
-            <section id="account" class="page">
+            <section id="navigation" class="page hidden">
+                <h2>Campus Map</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=MIT%20ADT%20University&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                        frameborder="0">
+                    </iframe>
+                </div>
+            </section>
+
+            <section id="account" class="page hidden">
                 <h2>Account</h2>
                 <p>Welcome, <span id="userDisplayName">User</span></p>
                 <button onclick="logout()">Sign Out</button>
@@ -121,6 +126,7 @@
         </main>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Campus Buddy - MIT ADT University</p>
     </footer>
