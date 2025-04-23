@@ -61,3 +61,11 @@ function closeNotifications() {
 function openDocumentsPortal() {
     window.open("https://www.tcsion.com/SelfServices/", "_blank");
 }
+
+// Enable login button only if privacy is agreed
+const privacyCheck = document.getElementById("privacyCheck");
+const loginBtn = document.getElementById("loginButton");
+
+privacyCheck.addEventListener("change", () => {
+    loginBtn.disabled = !privacyCheck.checked;
+});
