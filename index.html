@@ -17,7 +17,13 @@
         <h2>Login</h2>
         <input type="text" id="username" placeholder="Enter your username">
         <input type="password" id="password" placeholder="Enter your password">
-        <button onclick="login()">Login</button>
+
+        <label style="display: block; margin: 10px 0;">
+            <input type="checkbox" id="privacyCheck"> I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a>
+        </label>
+
+        <button id="loginButton" onclick="login()" disabled>Login</button>
+        
         <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
     </div>
 
@@ -81,9 +87,8 @@
                         <th>Subject</th>
                         <th>Cabin No</th>
                         <th>Contact</th>
-                        <th>E-mail</th>
                     </tr>
-<tr>
+                    <tr>
                         <td>Prof. Akash Alagankar</td>
                         <td>Design Thinking</td>
                         <td>A-305</td>
@@ -103,11 +108,12 @@
                     </tr>
                 </table>
             </section>
-<section id="documents" class="page hidden">
-  <h2>Documents</h2>
-  <p>Access your academic documents and services.</p>
-  <button onclick="openDocumentsPortal()" class="document-btn">Open TCS iON Portal</button>
-</section>
+
+            <section id="documents" class="page hidden">
+                <h2>Documents</h2>
+                <p>Access your academic documents and services.</p>
+                <button onclick="openDocumentsPortal()" class="document-btn">Open TCS iON Portal</button>
+            </section>
 
             <section id="navigation" class="page hidden">
                 <h2>Campus Map</h2>
