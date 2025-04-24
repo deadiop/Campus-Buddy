@@ -150,3 +150,38 @@ footer {
 .document-btn:hover {
     background-color: #e6a600;
 }
+
+/* Improved Faculty Table */
+#faculty table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#faculty th, #faculty td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#faculty th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#faculty td {
+    background-color: var(--light-gray);
+}
+
+#faculty button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#faculty button:hover {
+    background-color: #e6a600;
+}
