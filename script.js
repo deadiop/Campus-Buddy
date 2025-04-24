@@ -73,3 +73,8 @@ privacyCheck.addEventListener("change", () => {
 function composeEmail(email) {
     window.location.href = `mailto:${email}`;
 }
+
+function registerEvent(eventName) {
+    alert(`You are registering for ${eventName}. Redirecting to the registration portal...`);
+    // Example: window.open("https://registration-link.com", "_blank");
+}
