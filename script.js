@@ -69,3 +69,7 @@ const loginBtn = document.getElementById("loginButton");
 privacyCheck.addEventListener("change", () => {
     loginBtn.disabled = !privacyCheck.checked;
 });
+
+function composeEmail(email) {
+    window.location.href = `mailto:${email}`;
+}
